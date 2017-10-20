@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+    <form class="login_form" action="/login" method="post">
+      <label>id: <input type="text" id="id"></label>
+      <label>password: <input type="password" id="password"></label>
+      <input type="submit" id="submit" value="submit">
+      <br>
+      <a href="/login/facebook">facebook login</a><br>
+    </form>
+
+    <form action="products" method="get">
+      <fieldset>
+        <legend>GET</legend>
+      <input type="submit" />
+    </fieldset>
+    </form>
+
+    <form action="products" method="post">
+      <fieldset>
+        <legend>POST</legend>
+      <input name="name" />
+      <input name="price" />
+      <input type="submit" />
+    </fieldset>
+    </form>
+
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $('#submit').on('click',function() {
+      var id = $('#id').val();
+      var pw = $('#password').val();
+
+
+      $.ajax({
+        url:'/login',
+        type:'POST',
+        data: {'id': id, 'pass': pw},
+        success:function(data) {
+          console.log(data.success);
+        }
+      });
+
+      return false;
+    });
+  </script>
+</html>
