@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>find-user</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#search_btn').click(function(e) {
+          $.ajax({
+            url: '/process/finduser',
+            type: 'post',
+            data: {
+              search_option: $('#search_option').val();
+              keyword: $('#keyword').val();
+            },
+            success: function(data) {
+              alert(data);
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <center>
+    <h1>회원 검색 페이지</h1>
+    <hr>
+    <form name="form1" method="post" action="#">
+      <select id="search_option" name="search_option">
+        <option value="id">아이디</option>
+        <option value="name">이름</option>
+        <option value="email">이메일</option>
+      </select>
+      <input type="text" id="keyword" name="keyword" />
+      <input type="submit" id="search_btn" value="검색" />
+    </form>
+    <hr>
+  </center>
+  </body>
+</html>
