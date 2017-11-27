@@ -1,0 +1,39 @@
+.login {
+    display: block; /* 화면 표시시: none으로 설정*/
+    width: 435px; height: 25px;
+    position: absolute; top:180px; left:100px;
+    border: 1px solid grey;                       
+    background-color: #CDD9DF;
+    padding: 5px;
+}
+.login input {
+    width: 100px;           
+}
+.register {
+    display: block; /* 화면 표시시: none으로 설정*/
+    background-color: #D4F1C8;
+    width: 478px; height: 168px;
+    position: absolute; top:180px; left:100px;
+    border: 1px solid grey;                       
+    padding: 5px;
+}
+.selfinfo {
+    display: block; /* 화면 표시시: none으로 설정*/
+    background-color: #F1D3E7;
+    text-align: left;
+    width: 400px; height: 75px;
+    border: 1px solid grey;                       
+    padding: 5px;
+    overflow: auto;
+}
+td {border: 1px solid grey;padding: 2px}
+table {
+    text-align: center; 
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+.btnDiv {
+    text-align: right;           
+    margin-top:5px; margin-right:5px;
+}
+textarea {resize: none;}  

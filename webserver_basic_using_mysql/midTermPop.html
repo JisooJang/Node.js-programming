@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>중간시험 팝업창</title>
+    <link rel="stylesheet" href="/css/midTerm.css">
+    <style>
+        .register {
+            position: absolute; top:5px; left:5px;
+        }
+    </style>
+    <script>
+    </script>
+</head>
+<body>    
+    <div class="register">
+        응시자 정보
+        <table class="table1">
+            <tr>
+                <td><label>학번</label></td>
+                <td><%=stdno%></td>
+                <td><label>이름</label></td>
+                <td><%=nm%></td>
+            </tr>
+            <tr>
+                <td><label>소개</label></td>           
+                <td colspan="3"><div class="selfinfo">
+                        <%=intro%>
+                    </div></td>
+            </tr>
+        </table>
+        <div class="btnDiv"><input type="submit" value="닫기" onclick="window.close();"></div>       
+    </div>
+</body>
+</html>
